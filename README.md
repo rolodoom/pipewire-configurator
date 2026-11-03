@@ -1,6 +1,6 @@
 # jack-latency-updater
 
-Update PipeWire jack.conf node.latency from a simple GUI
+A simple GTK4 application written in Rust to configure PipeWire quantum and sample rate.
 
 ![Jack Latency Updater](https://raw.githubusercontent.com/rolodoom/jack-latency-updater/master/screenshot.png)
 
@@ -8,17 +8,48 @@ Update PipeWire jack.conf node.latency from a simple GUI
 
 [![GitHub license](https://img.shields.io/badge/license-GPL--3.0-blue)](https://raw.githubusercontent.com/rolodoom/jack-latency-updater/master/LICENSE)
 
+## Features
+
+- Configure PipeWire quantum using a dropdown selector.
+- Configure PipeWire sample rate using a dropdown selector.
+- Read the currently applied quantum and sample rate when the application starts.
+- Apply settings directly through `pw-metadata`.
+
 ## Dependencies
 
+On Debian-based distributions:
+
 ```bash
-sudo apt install python3-gi gir1.2-gtk-4.0
+sudo apt install pkg-config libgtk-4-dev
 ```
 
-## Build .deb
+You also need the Rust toolchain and Cargo.
+
+## Build
+
+Clone the repository:
 
 ```bash
-cd build
-dpkg-deb --build --root-owner-group . ../jack-latency-updater_amd64.deb
+git clone https://github.com/rolodoom/jack-latency-updater.git
+cd jack-latency-updater
+```
+
+Build the release binary:
+
+```bash
+cargo build --release
+```
+
+The executable will be available at:
+
+```text
+target/release/jack-latency-updater
+```
+
+## Run
+
+```bash
+cargo run --release
 ```
 
 ## Bugs and Issues

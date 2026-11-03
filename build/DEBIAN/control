@@ -1,9 +1,0 @@
-Package: jack-latency-updater
-Version: 0.2
-Section: utils
-Priority: optional
-Architecture: amd64
-Depends: python3, python3-gi, gir1.2-gtk-4.0
-Maintainer: Rolando Ramos Torres <rolando@triclick.co>
-Description: Jack Latency Updater
-  A simple GUI to update node.latency in PipeWire jack.conf
