@@ -5,6 +5,9 @@ edition = "2024"
 license = "GPL-3.0-only"
 description = "Configure PipeWire quantum and sample rate from a simple GUI."
 
+[package.metadata]
+app-id = "io.github.rolodoom.pipewire-configurator"
+
 [dependencies]
 gtk = { package = "gtk4", version = "0.11" }
 
