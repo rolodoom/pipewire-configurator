@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Pipewire Configurator
+Comment=Configure PipeWire quantum and sample rate from a simple GUI.
+Comment[es]=Configura el quantum y la frecuencia de muestreo de PipeWire desde una interfaz gráfica sencilla.
+Exec=pipewire-configurator
+Icon=io.github.rolodoom.pipewire-configurator
+Terminal=false
+Type=Application
+Categories=Audio;Utility;
