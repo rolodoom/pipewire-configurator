@@ -9,6 +9,7 @@ use crate::pipewire;
 // Default values used if the current PipeWire settings cannot be read.
 const DEFAULT_QUANTUM: &str = "256";
 const DEFAULT_RATE: &str = "48000";
+const APP_TITLE: &str = "Pipewire Configurator";
 
 // Available quantum values displayed in the dropdown.
 const VALID_QUANTUMS: &[&str] = &[
@@ -33,7 +34,7 @@ fn select_value(combo: &ComboBoxText, values: &[&str], current: &str) {
 pub fn build_ui(app: &Application) {
     let window = ApplicationWindow::builder()
         .application(app)
-        .title("PipeWire JACK Latency Updater")
+        .title(APP_TITLE)
         .default_width(420)
         .default_height(180)
         .build();
