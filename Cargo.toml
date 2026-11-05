@@ -1,7 +1,8 @@
 [package]
-name = "jack-latency-updater"
-version = "0.1.0"
-edition = "2021"
+name = "pipewire-configurator"
+version = "0.3.0"
+edition = "2024"
+license = "GPL-3.0-only"
 
 [dependencies]
-gtk = { package = "gtk4", version = "0.9" }
+gtk = { package = "gtk4", version = "0.11" }
