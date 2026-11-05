@@ -33,13 +33,19 @@ You also need the Rust toolchain and Cargo.
 
 ## Build
 
-The `build.sh` script builds the release binary and generates the Debian package in `target/release/`.
-
-It requires `python3` and `cargo-deb`.
+Build the Debian package using `cargo-deb`:
 
 ```bash
 cargo install cargo-deb
-./build.sh
+cargo deb
+```
+
+The generated `.deb` package will be available in `target/debian/`.
+
+Install the package:
+
+```bash
+sudo apt install ./target/debian/*.deb
 ```
 
 ## Bugs and Issues
