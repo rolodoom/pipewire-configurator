@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Jack Latency Updater
-Comment=Update PipeWire jack.conf node.latency from a simple GUI
-Comment[es]=Actualiza node.latency de jack.conf de PipeWire desde una GUI simple
-Exec=jack-latency-updater
-Icon=org.jack.latency.updater
-Terminal=false
-Type=Application
-Categories=Audio;Utility;
