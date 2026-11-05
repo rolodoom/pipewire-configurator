@@ -1,6 +1,6 @@
 # pipewire-configurator
 
-A simple GTK4 application written in Rust to configure PipeWire quantum and sample rate.
+A simple GTK4 application written in Rust for Debian to configure PipeWire quantum and sample rate.
 
 ![Jack Latency Updater](https://raw.githubusercontent.com/rolodoom/pipewire-configurator/master/screenshot.png)
 
@@ -15,9 +15,15 @@ A simple GTK4 application written in Rust to configure PipeWire quantum and samp
 - Read the currently applied quantum and sample rate when the application starts.
 - Apply settings directly through `pw-metadata`.
 
-## Dependencies
+## Installation
 
-On Debian-based distributions:
+Download the latest `.deb` package from [GitHub Releases](https://github.com/rolodoom/pipewire-configurator/releases) and install it:
+
+```bash
+sudo apt install ./pipewire-configurator_*.deb
+```
+
+## Dependencies
 
 ```bash
 sudo apt install pkg-config libgtk-4-dev
@@ -27,59 +33,14 @@ You also need the Rust toolchain and Cargo.
 
 ## Build
 
-Clone the repository:
+The `build.sh` script builds the release binary and generates the Debian package in `target/release/`.
 
-```bash
-git clone https://github.com/user/pipewire-configurator.git
-cd pipewire-configurator
-```
-
-Build the release binary:
-
-```bash
-cargo build --release
-```
-
-The executable will be available at:
-
-```text
-target/release/pipewire-configurator
-```
-
-## Run
-
-```bash
-cargo run --release
-```
-
-## Build Debian package (.deb)
-
-Install `cargo-deb` if you haven't already:
+It requires `python3` and `cargo-deb`.
 
 ```bash
 cargo install cargo-deb
+./build.sh
 ```
-
-Build the release binary and generate the Debian package:
-
-```bash
-cargo build --release
-cargo deb
-```
-
-The generated `.deb` package will be available in:
-
-```text
-target/debian/
-```
-
-Install the package locally:
-
-```bash
-sudo apt install ./target/debian/pipewire-configurator_*.deb
-```
-
-The package automatically declares its shared library dependencies using `cargo-deb`'s `$auto` mechanism.
 
 ## Bugs and Issues
 
