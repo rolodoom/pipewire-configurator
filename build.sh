@@ -37,7 +37,6 @@ for key, value in values.items():
 ARCH="$(dpkg --print-architecture)"
 
 RELEASE="$ROOT/target/release"
-APPDIR="$RELEASE/AppDir"
 
 DESKTOP="data/applications/$APP_ID.desktop"
 ICON="data/icons/hicolor/scalable/apps/$APP_ID.svg"
