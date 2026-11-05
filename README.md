@@ -2,7 +2,7 @@
 
 A simple GTK4 application written in Rust for Debian to configure PipeWire quantum and sample rate.
 
-![Jack Latency Updater](https://raw.githubusercontent.com/rolodoom/pipewire-configurator/master/screenshot.png)
+![Jack Latency Updater](screenshot.png)
 
 ## Status
 
