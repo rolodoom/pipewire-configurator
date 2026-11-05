@@ -3,6 +3,35 @@ name = "pipewire-configurator"
 version = "0.3.0"
 edition = "2024"
 license = "GPL-3.0-only"
+description = "Configure PipeWire quantum and sample rate from a simple GUI."
 
 [dependencies]
 gtk = { package = "gtk4", version = "0.11" }
+
+[package.metadata.deb]
+maintainer = "rolodoom <rolando@triclick.co>"
+copyright = "2026, rolodoom"
+license-file = ["LICENSE", "0"]
+extended-description = """
+Configure PipeWire quantum and sample rate from a simple GUI.
+"""
+depends = "$auto"
+section = "utils"
+priority = "optional"
+assets = [
+  [
+    "target/release/pipewire-configurator",
+    "usr/bin/pipewire-configurator",
+    "755",
+  ],
+  [
+    "data/applications/io.github.rolodoom.pipewire-configurator.desktop",
+    "usr/share/applications/io.github.rolodoom.pipewire-configurator.desktop",
+    "644",
+  ],
+  [
+    "data/icons/hicolor/scalable/apps/io.github.rolodoom.pipewire-configurator.svg",
+    "usr/share/icons/hicolor/scalable/apps/io.github.rolodoom.pipewire-configurator.svg",
+    "644",
+  ],
+]
